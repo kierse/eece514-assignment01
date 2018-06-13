@@ -1,0 +1,17 @@
+./adb shell monkey -v -v -v -p org.horaapps.leafpic.debug\
+ --pct-anyevent 0\
+ --pct-appswitch 0\
+ --pct-flip 0\
+ --pct-majornav 20\
+ --pct-motion 20\
+ --pct-nav 0\
+ --pct-pinchzoom 0\
+ --pct-rotation 5\
+ --pct-syskeys 5\
+ --pct-touch 40\
+ --pct-trackball 10\
+ --randomize-throttle\
+ --throttle 250\
+ --kill-process-after-error\
+ 100
+

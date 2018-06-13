@@ -1,0 +1,17 @@
+./adb shell monkey -v -v -v -p com.esoxjem.movieguide\
+ --pct-anyevent 0\
+ --pct-appswitch 0\
+ --pct-flip 0\
+ --pct-majornav 0\
+ --pct-motion 25\
+ --pct-nav 25\
+ --pct-pinchzoom 0\
+ --pct-rotation 0\
+ --pct-syskeys 0\
+ --pct-touch 50\
+ --pct-trackball 0\
+ --randomize-throttle
+ --throttle 500\
+ --kill-process-after-error\
+ 100
+
