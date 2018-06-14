@@ -15,9 +15,5 @@ org.apache.activemq.command.BrokerInfo
 org.apache.activemq.command.ConnectionInfo
 org.apache.activemq.command.Message
 org.apache.activemq.command.MessageId
-org.apache.activemq.test.JmsResourceProvider
-org.apache.activemq.test.TestSupport
 org.apache.activemq.util.ByteSequence
 org.apache.activemq.util.IOHelper
-org.apache.activemq.util.Wait.Condition
-org.apache.activemq.util.Wait
