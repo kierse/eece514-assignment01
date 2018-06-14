@@ -1,0 +1,1 @@
+java -cp /Users/kierse/working/personal/school/temp/randoop-4.0.4/randoop-all-4.0.4.jar:/Users/kierse/working/personal/school/temp/jpacman.git/target/classes randoop.main.Main gentests --classlist=/Users/kierse/working/personal/school/temp/jpacman.git/classList.txt --time-limit=60 --flaky-test-behavior=discard
