@@ -1,0 +1,62 @@
+From a8d8f0f108f9d88ac3dbbf5a50ce0c874fe0fe59 Mon Sep 17 00:00:00 2001
+From: Kieran Elliott <kierse@pissiphany.com>
+Date: Fri, 15 Jun 2018 15:27:29 -0700
+Subject: [PATCH] introduced bug to DonateActivity
+
+---
+ app/src/main/java/org/horaapps/leafpic/App.java              | 12 ++++++------
+ .../java/org/horaapps/leafpic/activities/MainActivity.java   |  1 +
+ .../java/org/horaapps/leafpic/activities/DonateActivity.java |  2 +-
+ 3 files changed, 8 insertions(+), 7 deletions(-)
+
+diff --git a/app/src/main/java/org/horaapps/leafpic/App.java b/app/src/main/java/org/horaapps/leafpic/App.java
+index 199152e4..216fbdfe 100644
+--- a/app/src/main/java/org/horaapps/leafpic/App.java
++++ b/app/src/main/java/org/horaapps/leafpic/App.java
+@@ -26,12 +26,12 @@ public class App extends MultiDexApplication {
+ 
+         ApplicationUtils.init(this);
+ 
+-        /** This process is dedicated to LeakCanary for heap analysis.
+-         *  You should not init your app in this process. */
+-        if (LeakCanary.isInAnalyzerProcess(this)) {
+-            return;
+-        }
+-        LeakCanary.install(this);
++//        /** This process is dedicated to LeakCanary for heap analysis.
++//         *  You should not init your app in this process. */
++//        if (LeakCanary.isInAnalyzerProcess(this)) {
++//            return;
++//        }
++//        LeakCanary.install(this);
+ 
+         registerFontIcons();
+         initialiseStorage();
+diff --git a/app/src/main/java/org/horaapps/leafpic/activities/MainActivity.java b/app/src/main/java/org/horaapps/leafpic/activities/MainActivity.java
+index b2b3f5e9..9f55592c 100644
+--- a/app/src/main/java/org/horaapps/leafpic/activities/MainActivity.java
++++ b/app/src/main/java/org/horaapps/leafpic/activities/MainActivity.java
+@@ -291,6 +291,7 @@ public class MainActivity extends SharedMediaActivity implements
+ 
+         navigationDrawerView.setListener(this);
+         navigationDrawerView.setAppVersion(BuildConfig.VERSION_NAME);
++        navigationDrawer.openDrawer(navigationDrawerView);
+     }
+ 
+     private void setupFAB() {
+diff --git a/app/src/noGPlay/java/org/horaapps/leafpic/activities/DonateActivity.java b/app/src/noGPlay/java/org/horaapps/leafpic/activities/DonateActivity.java
+index d2127f15..fdfc2792 100644
+--- a/app/src/noGPlay/java/org/horaapps/leafpic/activities/DonateActivity.java
++++ b/app/src/noGPlay/java/org/horaapps/leafpic/activities/DonateActivity.java
+@@ -40,7 +40,7 @@ public class DonateActivity extends ThemedActivity {
+     protected void onPostCreate(Bundle savedInstanceState) {
+         super.onPostCreate(savedInstanceState);
+         setContentView(R.layout.activity_donate);
+-        toolbar = (Toolbar) findViewById(R.id.toolbar);
++//        toolbar = (Toolbar) findViewById(R.id.toolbar);
+         scr = (ScrollView) findViewById(R.id.donateAct_scrollView);
+         btnDonatePP = findViewById(R.id.button_donate_paypal);
+ 
+-- 
+2.13.0
+
