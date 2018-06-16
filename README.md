@@ -1,6 +1,6 @@
 # EECE 514: assignment01
 
-#### For each tool (Monkey & Randoop), generate tests for the appropriate applications. Measure the time taken to generate tests. For example, Randoop uses a time limit to generate tests. How many tests does it generate in that duration?
+### For each tool (Monkey & Randoop), generate tests for the appropriate applications. Measure the time taken to generate tests. For example, Randoop uses a time limit to generate tests. How many tests does it generate in that duration?
 
 Monkey | Time taken to generate 10,000 tests
 ------ | -----------------------------------
@@ -12,7 +12,7 @@ Randoop | Test generated in 60 seconds
 JPacman | 2099(mac) / 506 (windows)
 ActiveMQ | 869 (3 error / 866 regression)
 
-#### Is the test coverage adequate?
+### Is the test coverage adequate?
 
 ##### Monkey 
 
@@ -38,7 +38,7 @@ Increasing the time limit only gave a marginal increase in coverage rates; we ge
 
 A reason for low percentages in ActiveMQ: the coverage is calculated for the whole code base while we limited test generation to a small subset of classes, so it’s not always an issue of adequacy.
 
-#### Do the tools find bugs in the applications? You can artificially create bugs to determine if the tools find the bugs.
+### Do the tools find bugs in the applications? You can artificially create bugs to determine if the tools find the bugs.
 
 ##### Monkey 
 
@@ -48,7 +48,7 @@ A reason for low percentages in ActiveMQ: the coverage is calculated for the who
 
 - Randoop outputs an ErrorTest suite “that detect bugs in your current code”, as defined by the user’s manual. In addition, when making changes that don’t change behaviour or API, the generated regression tests will detect changes in behaviour or bugs affecting expected execution behaviour.
 
-#### Are the tools easy to use?
+### Are the tools easy to use?
 
 ##### Monkey 
 
@@ -64,7 +64,7 @@ A reason for low percentages in ActiveMQ: the coverage is calculated for the who
 - Increasing logging verbosity produced a lot of essentially useless data. Didn’t help diagnose problems.
 - Little feedback when generated tests are being written to disk. For long time limits, this left us wondering if the tool had frozen or was still making progress. 
 
-#### What are the limitations of the tools?
+### What are the limitations of the tools?
 
 ##### Monkey 
 
@@ -80,7 +80,7 @@ A reason for low percentages in ActiveMQ: the coverage is calculated for the who
 - There seems to be a different amount of generated tests for Mac and Windows, although the coverage were nearly identical. Unclear why this happened.
 - Generating tests for package-level code is more difficult than public code as tests have to be in the correct package. Randoop has support for testing this code, however, it doesn’t appear able to generate tests for both public and package-private code in one execution.
 
-#### How would you improve these tools? Identify at least one improvement for each tool that you believe would be most useful for developers.
+### How would you improve these tools? Identify at least one improvement for each tool that you believe would be most useful for developers.
 
 ##### Monkey
 
